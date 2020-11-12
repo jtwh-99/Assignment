@@ -1,0 +1,13 @@
+D:\FioreFlowerShop\bin\Debug\FioreFlowerShop.exe.config
+D:\FioreFlowerShop\bin\Debug\FioreFlowerShop.exe
+D:\FioreFlowerShop\bin\Debug\FioreFlowerShop.pdb
+D:\FioreFlowerShop\bin\Debug\FioreFlowerShop.xml
+D:\FioreFlowerShop\obj\Debug\FioreFlowerShop.vbprojAssemblyReference.cache
+D:\FioreFlowerShop\obj\Debug\FioreFlowerShop.Form1.resources
+D:\FioreFlowerShop\obj\Debug\FioreFlowerShop.Resources.resources
+D:\FioreFlowerShop\obj\Debug\FioreFlowerShop.vbproj.GenerateResource.cache
+D:\FioreFlowerShop\obj\Debug\FioreFlowerShop.vbproj.CoreCompileInputs.cache
+D:\FioreFlowerShop\obj\Debug\FioreFlowerShop.exe
+D:\FioreFlowerShop\obj\Debug\FioreFlowerShop.xml
+D:\FioreFlowerShop\obj\Debug\FioreFlowerShop.pdb
+D:\FioreFlowerShop\obj\Debug\FioreFlowerShop.MakeOrders.resources

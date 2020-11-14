@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title> Floral Shop </title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="Learn how to use javascript like mysql ">
+
+	<meta name="author" content="Code With Mark">
+	<meta name="authorUrl" content="http://codewithmark.com">
+
+	<!--[css/js files > start]-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
+	<script src="https://cdn.awesomefunctions.com/awesome-functions.min.js"></script> 
+	<!--[css/js files > end]-->
+
+
+	<script src="storage.js"></script> 
+ 
+ 
+</head>
+
+
+	<script type="text/javascript">
+
+		//dom storage data
+		
+ 		var tblTasks = 
+		[				
+			{ 
+				rec_id:js.MD5(),
+				TaskName : 'Task 1', 
+				TaskDate : moment().format("YYYY-MM-DD"), 
+				TaskDesc : "This is description 1", 
+			},
+			{ 
+				rec_id:js.MD5(),
+				TaskName : 'Task 2', 
+				TaskDate : moment().format("YYYY-MM-DD"), 
+				TaskDesc : "This is description 2",
+			},			
+			{ 
+				rec_id:js.MD5(),
+				TaskName : 'Task 3', 
+				TaskDate : moment().add(7, 'days').format("YYYY-MM-DD") , 
+				TaskDesc : "This is description 3",
+			}
+		]; 
+
+		console.table(tblTasks);
+
+		//var tblTasks = []
+
+
+
+	 
+	</script>
+
+<body> 
+
+<h1 class="text-center">Welcome To Floral Shop</h1>
+
+<!--[Menu - Start]-->
+<div class="text-center">
+
+	<div class="btn btn-success BTN_Add_New"> Add New</div>
+	
+	<div class="btn btn-success BTN_View"> Shopping Chart</div>
+
+	<div class="btn btn-success BTN_Delete_All"> Delete Shopping Lists</div>
+
+</div>
+<!--[Menu - End]-->
+<br><br>
+
+
+
+<!--[Screen Data - Start]-->
+<div class=" container Screen Screen_Data  "  >  </div>
+<!--[Screen Data - End]-->
+
+
+
+<!--[New Task Template - Start]-->
+<div class="Screen Template_New_Task" style="display:none;"  >
+
+	<div class="panel panel-primary  center-block" style="max-width:400px;">
+	  
+	  	<div class="panel-heading text-center">Add New</div>
+
+	  	<!--[New Task Body - Start]-->
+		<div class="panel-body"> 
+
+			<!--[Task Name - Start]-->
+			<div class="input-group">
+				<span class="input-group-addon">Boutiquet Size</span>
+				<select class="form-control Size"  placeholder="Please select size"   ><option value="">--Please Select Size:--</option><option value="Bigger">Bigger</option><option value="Regular">Regular</option><option value="Smaller">Smaller</option></select>
+			</div>
+			<br>
+
+			<div class="input-group">
+				<span class="input-group-addon">Quantity</span>
+				<input type="number" min="1" max="10" value=""  ondrop="return false;" onpaste="return false;" class="form-control Quantity"  placeholder="Please select quantity"   >
+			</div>
+			<br>
+
+			<div class="input-group">
+				<span class="input-group-addon">By Occasion</span>
+				<select class="form-control Occasion"  placeholder="Please specifiy occassion"  ><option value="">--Please Specifiy Occasion--</option><option value="For Her">For Her</option><option value="For Him"> For Him</option><option value="Anniversary">Anniversary</option><option value="Graduation">Graduation</option></select>
+			</div>
+			<br>
+
+			
+
+			<!--[Task Name - End]-->
+
+			<!--[Completion Date - Start]-->
+			<div class="input-group">
+				<span class="input-group-addon">Request Date</span>
+				<input   type="date" class="form-control TaskDate"  >
+			</div>
+			<br><br>
+			<!--[Completion Date - End]-->
+
+
+			<!--[Task description - Start]-->
+			<div class="input-group">
+				<span class="input-group-addon">Add-Ons Items</span>
+				<textarea class="form-control TaskDesc" rows="5" placeholder="Please clearly specifiy add-ons items. If not any items add-ons, type '- or None'"></textarea>
+			</div>
+			<br><br>
+			<!--[Task description - End]-->
+
+			<div class="btn btn-primary text-center btn_Task"> View All Tasks</div>
+
+		</div>
+	  <!--[New Task Body - Start]-->
+	</div>
+</div>
+<!--[New Task Template - Start]-->
+
+
+
+
+</body>
+
+
+
+</html>

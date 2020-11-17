@@ -4,7 +4,13 @@
  * and open the template in the editor.
  */
 package PickUpPart;
-
+import java.util.*;
+import PickUpPart.CustomerDetail;
+import PickUpPart.ConfirmPickUp;
+import PickUpPart.PickUp;
+import PickUpPart.AddPickUp;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 
 /**
@@ -18,6 +24,7 @@ public class CustomerDetail {
     String Time;
     String Description;
     boolean Status;
+    ArrayList<CustomerDetail> a = new ArrayList<CustomerDetail>();
     
     public CustomerDetail(String pno, String custn, String d, String t, String desc, boolean s)
     {
@@ -27,5 +34,17 @@ public class CustomerDetail {
         Time = t;
         Description = desc;
         Status= s;
+        
+        
     }
+
+    CustomerDetail() 
+    {
+        CustomerDetail exp1 = new CustomerDetail("1001","Chong King","17 Nov 2020","2020","99 rose",false);
+        CustomerDetail exp2 = new CustomerDetail("1002","Cong King","18 Nov 2020","1500","5 roses 10 lily 20 waterlily",false);
+        a.add(exp1);
+        a.add(exp2); 
+    }
+    
+    
 }

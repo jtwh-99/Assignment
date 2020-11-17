@@ -4,7 +4,11 @@
  * and open the template in the editor.
  */
 package PickUpPart;
-
+import java.util.*;
+import PickUpPart.CustomerDetail;
+import PickUpPart.ConfirmPickUp;
+import PickUpPart.PickUp;
+import PickUpPart.AddPickUp;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,19 +21,14 @@ public class ConfirmPickUp {
     public ConfirmPickUp(){}
     
     
-    public static void confirm(int counter)
+    public static void confirm()
     {
         Scanner sc=new Scanner(System.in);
-        int reader, number;
+        int reader;
+        int number;
         String reader1;
         int i;
-        ArrayList<CustomerDetail> a = new ArrayList<CustomerDetail>();
-        
-        CustomerDetail myPickUp = new CustomerDetail("1001","Chong King","17 Nov 2020","2020","99 rose",false);
-        CustomerDetail myPickUp2 = new CustomerDetail("1002","Cong King","18 Nov 2020","1500","5 roses 10 lily 20 waterlily",false);
-        
-        a.add(myPickUp);
-        a.add(myPickUp2);
+        CustomerDetail cd = new CustomerDetail();
         
         System.out.println("PICKUP LIST");
         System.out.println("-------------------------------------------------------");
@@ -38,48 +37,48 @@ public class ConfirmPickUp {
        
         System.out.println("Choose the number shown below that customer came to pick. (press 99 to exit)");
         
-        for (i=0;i<a.size();i++)
+        for (i=0;i<cd.a.size();i++)
         {
-            number = 0;
-            number = i+1;
-            System.out.println(number+"."+a.get(i)+"\n");
+            if (cd.a.get(i).Status == false)
+            {
+                number = i+1;
+                System.out.println(number +"."+cd.a.get(i).PickUpNo+"\t\t"+cd.a.get(i).Time+"\t"+cd.a.get(i).Date+"\t"+cd.a.get(i).Description);
+                
+            }
         }
         
         System.out.println("Choose the number above to proceed!\n");
-        
         try{
             reader = Integer.parseInt(sc.nextLine());
-            reader = i;
-            if (reader==i)
+            reader = reader -1;
+            
+            if (reader == 99)
             {
-                System.out.println("Are you confirm the customer shown below has come to pickup their flowers?");
-                System.out.println("Pickup Code\t:" + myPickUp.PickUpNo + 
-                    "\nName\t\t:" + myPickUp.CustName + 
-                    "\nDate\t\t:" + myPickUp.Date + 
-                    "\nTime\t\t:" + myPickUp.Time + 
-                    "\nDesciption\t:" + myPickUp.Description);
-                System.out.println("Press 1 to confirm the pickup!\nPress 2 back to the pickup list!");
-                reader1 = sc.nextLine();
-                
-                if (reader1.equals("1")){
-                myPickUp.Status = true;
-                System.out.println("The customer get the flowers!");
-                System.exit(0);
-                }
-                else{
-                    System.exit(0);
-                }
-                
+                PickUp.main(null);
             }
-            else if (reader == 99)
-            {
-                System.exit(0);
-            }
-            else if (reader > a.size() || reader < 0)
+            else if (reader > cd.a.size() || reader < 0)
             {
                 System.out.println("The input is unavailable");
+                PickUp.main(null);
             }
             
+            System.out.println("Are you confirm the customer shown below has come to pickup their flowers?");
+            System.out.println("Pickup Code\t:" + cd.a.get(reader).PickUpNo + 
+                    "\nName\t\t:" + cd.a.get(reader).CustName + 
+                    "\nDate\t\t:" + cd.a.get(reader).Date + 
+                    "\nTime\t\t:" + cd.a.get(reader).Time + 
+                    "\nDesciption\t:" + cd.a.get(reader).Description);
+            System.out.println("Press 1 to confirm the pickup!\nPress anything back to the Menu!");
+            reader1 = sc.nextLine();
+                
+            if (reader1.equals("1")){
+                cd.a.get(reader).Status = true;
+                System.out.println("The customer get the flowers!");
+                PickUp.main(null);
+            }
+            else{
+                PickUp.main(null);
+            }
         }
         catch (Exception e)
             {

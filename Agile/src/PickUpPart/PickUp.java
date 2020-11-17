@@ -5,8 +5,12 @@
  */
 package PickUpPart;
 import java.util.*;
-import PickUpPart.AddPickUp;
+import PickUpPart.CustomerDetail;
 import PickUpPart.ConfirmPickUp;
+import PickUpPart.PickUp;
+import PickUpPart.AddPickUp;
+import java.util.ArrayList;
+import java.util.Scanner;
 /**
  *
  * @author User
@@ -21,8 +25,7 @@ public class PickUp {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner sc=new Scanner(System.in);
-        AddPickUp apu;
-        apu = new AddPickUp();
+        AddPickUp apu = new AddPickUp();
         ConfirmPickUp cpu = new ConfirmPickUp();
         int reader=0;
         int counter=0;
@@ -41,7 +44,11 @@ public class PickUp {
                     counter++;
                 }
                 else if(reader == 2)
-                cpu.confirm(counter);
+                cpu.confirm();
+                else if(reader == 3)
+                {
+                    System.exit(0);
+                }
                 else
                     System.out.println("Please choose between 1 to 3");
             }
@@ -51,4 +58,5 @@ public class PickUp {
             }
         }while (reader != 3);
     }
+
 }

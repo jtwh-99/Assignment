@@ -10,8 +10,10 @@ package Main;
  * @author USER
  */
 public interface CatalogInterface <T extends Comparable<T>> {
-     public boolean add(T newEntry);
-    
+     public boolean add(T newEntry , T secondEntry);
+     
+     public String toString2(int cID);
+     
     public boolean remove(T anEntry);
 
     public void clear();
@@ -20,5 +22,6 @@ public interface CatalogInterface <T extends Comparable<T>> {
 
     public boolean isEmpty();
     
-    public boolean edit(T newEntry);
+    public boolean edit(int ID, int choose, T newEntry);
 }
+

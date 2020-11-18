@@ -19,12 +19,14 @@ public class AddPickUp {
     
     static Scanner sc=new Scanner(System.in);
     static String reader;
-    static String name, date, time, desc, pickupno;
+    static String name, date, time, desc;
+    int pickupno;
     CustomerDetail cd = new CustomerDetail();
     int i;
     
-    public static void Add()
+    public void Add()
     {
+        pickupno = cd.a.size()+1001;
         
         do{
             System.out.println("Please enter the customer name: ");
@@ -63,13 +65,13 @@ public class AddPickUp {
         
         if (reader.equals("1"))
         {
-            CustomerDetail add1 = new CustomerDetail(pickupno,name,date,time,desc,false);
+            CustomerDetail add1 = new CustomerDetail(Integer.toString(pickupno),name,date,time,desc,false);
             cd.a.add(add1);
             System.out.println("Successful!");
             System.exit(0);
         }
         else
-            System.out.println("NO!");
+            Add();
             System.exit(0);
     }
 }

@@ -1,7 +1,6 @@
 $(document).ready(function()
 {		
 
-
  	
  	//load new task screen 
  	$(document).on('click', '.BTN_Add_New', function(event) 
@@ -50,7 +49,7 @@ $(document).ready(function()
 		else if(frm.IsEmpty(TaskDesc.val()))
 		{
 			//Show alert
-			bs.ShowError ("Please enter Task description",TaskDesc)
+			bs.ShowError ("Please enter specific message",TaskDesc)
 		}
 		else
 		{			 
@@ -216,7 +215,7 @@ $(document).ready(function()
 		else if(frm.IsEmpty(TaskDesc.val()))
 		{
 			//Show alert
-			bs.ShowError ("Please enter Task description",TaskDesc)
+			bs.ShowError ("Please enter specific message",TaskDesc)
 		}
 		else
 		{		

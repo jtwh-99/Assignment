@@ -35,21 +35,21 @@
 		[				
 			{ 
 				rec_id:js.MD5(),
-				TaskName : 'Task 1', 
-				TaskDate : moment().format("YYYY-MM-DD"), 
-				TaskDesc : "This is description 1", 
+				//TaskName : 'Task 1', 
+				//TaskDate : moment().format("YYYY-MM-DD"), 
+				//TaskDesc : "This is description 1", 
 			},
 			{ 
 				rec_id:js.MD5(),
-				TaskName : 'Task 2', 
-				TaskDate : moment().format("YYYY-MM-DD"), 
-				TaskDesc : "This is description 2",
+				//TaskName : 'Task 2', 
+				//TaskDate : moment().format("YYYY-MM-DD"), 
+				//TaskDesc : "This is description 2",
 			},			
 			{ 
 				rec_id:js.MD5(),
-				TaskName : 'Task 3', 
-				TaskDate : moment().add(7, 'days').format("YYYY-MM-DD") , 
-				TaskDesc : "This is description 3",
+				//TaskName : 'Task 3', 
+				//TaskDate : moment().add(7, 'days').format("YYYY-MM-DD") , 
+				//TaskDesc : "This is description 3",
 			}
 		]; 
 
@@ -116,7 +116,7 @@
 			
 			<div class="input-group">
 				<span class="input-group-addon">Request Date</span>
-				<input   type="date" class="form-control TaskDate"  >
+				<input type="date" min="2020-11-22" step="1" max="2021-02-28" class="form-control TaskDate"  >
 			</div>
 			<br><br>
 			

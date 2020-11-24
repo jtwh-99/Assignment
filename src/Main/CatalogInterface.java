@@ -10,7 +10,7 @@ package Main;
  * @author USER
  */
 public interface CatalogInterface <T extends Comparable<T>> {
-     public boolean add(T newEntry , T secondEntry);
+     public boolean add(T newEntry , T secondEntry, T thirdEntry);
      
      public String toString2(int cID);
      
@@ -24,4 +24,3 @@ public interface CatalogInterface <T extends Comparable<T>> {
     
     public boolean edit(int ID, int choose, T newEntry);
 }
-

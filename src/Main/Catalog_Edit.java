@@ -28,10 +28,10 @@ public class Catalog_Edit {
                if(control1==99)
                    break;
                System.out.println(ciList.toString2(control1));
-               System.out.println("Which one you want to edit for this?\n 1.Flower \n 2.Flower detail\n 3.Exit \n Enter :");
+               System.out.println("Which one you want to edit for this?\n 1.Flower \n 2.Flower detail\n 3.Price\n 4.Exit \n Enter :");
                try{
                    control2 =Integer.parseInt(scan.nextLine());
-                   if (control2 == 1 || control2 ==2)
+                   if (control2 == 1 || control2 ==2|| control2 ==3)
                    { 
                        
                        System.out.println("Change to ?  :");
@@ -50,12 +50,12 @@ public class Catalog_Edit {
        }while (control1 != 99);
     }
     public static void menu(){
-        ciList.add("Orchid","Smells good and best sell!");
-        ciList.add("Sun Flower","Easy to plant, no one can ignore it!");
+        ciList.add("Orchid","Smells good and best sell!","100");
+        ciList.add("Sun Flower","Easy to plant, no one can ignore it!","100");
         
-        ciList.add("Lady Finger","Beautiful! you also can eat as a vage!");
+        ciList.add("Lady Finger","Beautiful! you also can eat as a vage!","100");
         
-        ciList.add("Rose","Opps, sold out.");
+        ciList.add("Rose","Opps, sold out.","100");
         
         
     }

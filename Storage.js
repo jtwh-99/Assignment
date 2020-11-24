@@ -90,7 +90,7 @@ $(document).ready(function()
 
  		if(js.Size(AllTasks) < 1 || js.Size(AllTasks)==0)
  		{ 
- 			var d = bs.AlertMsg("Oppps...Looks like there are no tasks. <br><br> You should add a task first", "warning");
+ 			var d = bs.AlertMsg("Oppps...Looks like there are no customize flowers. <br><br> You should add a flowers", "warning");
 			$('.Screen_Data').html(d).show();
  			return false;
  		}
@@ -253,7 +253,7 @@ $(document).ready(function()
 
  		var ObjArrOptions = 
 		{
-		  text: "Are you sure you want to delete Task Name (<b>"+task_name+"<b>) ?",
+		  text: "Are you sure you want to delete Task ?",
 		  title: "Confirmation required",
 		  confirm: function(button) 
 		  {				
@@ -298,7 +298,7 @@ $(document).ready(function()
  		
  		if(js.Size(AllTasks) < 1 || js.Size(AllTasks)==0)
  		{ 
- 			var d = bs.AlertMsg("Oppps...Looks like there are no tasks. <br><br> You should add a task first", "warning");
+ 			var d = bs.AlertMsg("Oppps...Looks like there are no customize flowers. <br><br> You should add a flowers", "warning");
 			$('.Screen_Data').html(d).show();
  			return false;
  		}

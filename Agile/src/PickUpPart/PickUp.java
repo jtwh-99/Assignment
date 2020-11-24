@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 package PickUpPart;
+import DeliveryPart.EditDetail;
 import java.util.*;
-import PickUpPart.CustomerDetail;
+import PickUpPart.PickUpDetail;
 import PickUpPart.ConfirmPickUp;
 import PickUpPart.PickUp;
 import PickUpPart.AddPickUp;
@@ -29,6 +30,14 @@ public class PickUp {
         ConfirmPickUp cpu = new ConfirmPickUp();
         int reader=0;
         int counter=0;
+        String choice;
+        
+        System.out.println("choose 1 to go delivery, else to proceed");
+        choice = sc.nextLine();
+        if (choice.equals("1"))
+        {
+            EditDetail.EditCustDetail();
+        }
         
         
         do

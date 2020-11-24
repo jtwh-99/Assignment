@@ -5,7 +5,7 @@
  */
 package PickUpPart;
 import java.util.*;
-import PickUpPart.CustomerDetail;
+import PickUpPart.PickUpDetail;
 import PickUpPart.ConfirmPickUp;
 import PickUpPart.PickUp;
 import PickUpPart.AddPickUp;
@@ -28,14 +28,15 @@ public class ConfirmPickUp {
         int number;
         String reader1;
         int i;
-        CustomerDetail cd = new CustomerDetail();
+        PickUpDetail cd = new PickUpDetail();
         
-        System.out.println("PICKUP LIST");
+        
+        System.out.println("\n\n\nPICKUP LIST");
+        System.out.println("Choose the number shown below that customer came to pick. (press 99 to exit)");
         System.out.println("-------------------------------------------------------");
         System.out.println("  Pickup Code\tTime\tDate\t\tDescription");
         System.out.println("-------------------------------------------------------");
        
-        System.out.println("Choose the number shown below that customer came to pick. (press 99 to exit)");
         
         for (i=0;i<cd.a.size();i++)
         {

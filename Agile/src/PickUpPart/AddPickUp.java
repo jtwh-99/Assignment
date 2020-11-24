@@ -5,7 +5,7 @@
  */
 package PickUpPart;
 import java.util.*;
-import PickUpPart.CustomerDetail;
+import PickUpPart.PickUpDetail;
 import PickUpPart.ConfirmPickUp;
 import PickUpPart.PickUp;
 import PickUpPart.AddPickUp;
@@ -21,7 +21,7 @@ public class AddPickUp {
     static String reader;
     static String name, date, time, desc;
     int pickupno;
-    CustomerDetail cd = new CustomerDetail();
+    PickUpDetail cd = new PickUpDetail();
     int i;
     
     public void Add()
@@ -60,15 +60,19 @@ public class AddPickUp {
                 + "\nPick up date\t:" + date
                 + "\nPick up time\t:" + time
                 + "\nDescription\t:" + desc);
-        System.out.println("Is the information correct?\n2 is redo, else will be count as yes!");
+        System.out.println("Is the information correct?\n1 is confirm, 99 is exit to menu, else will be count as no and redo!");
         reader = sc.nextLine();
         
         if (reader.equals("1"))
         {
-            CustomerDetail add1 = new CustomerDetail(Integer.toString(pickupno),name,date,time,desc,false);
+            PickUpDetail add1 = new PickUpDetail(Integer.toString(pickupno),name,date,time,desc,false);
             cd.a.add(add1);
             System.out.println("Successful!");
-            System.exit(0);
+            PickUp.main(null);
+        }
+        else if (reader.equals("99"))
+        {
+            PickUp.main(null);
         }
         else
             Add();

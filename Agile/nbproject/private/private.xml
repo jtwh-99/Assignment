@@ -5,7 +5,9 @@
         <group>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/Agile/src/PickUpPart/AddPickUp.java</file>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/Agile/src/PickUpPart/ConfirmPickUp.java</file>
-            <file>file:/C:/Users/User/Documents/NetBeansProjects/Agile/src/PickUpPart/CustomerDetail.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/Agile/src/DeliveryPart/EditDetail.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/Agile/src/PickUpPart/PickUpDetail.java</file>
+            <file>file:/C:/Users/User/Documents/NetBeansProjects/Agile/src/DeliveryPart/DeliveryDetail.java</file>
             <file>file:/C:/Users/User/Documents/NetBeansProjects/Agile/src/PickUpPart/PickUp.java</file>
         </group>
     </open-files>
